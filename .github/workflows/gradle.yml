@@ -21,7 +21,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon
+        run: chmod +x gradlew && ./gradlew build --no-daemon
 
       - name: Run Checkstyle
         run: ./gradlew checkstyleMain
@@ -31,3 +31,4 @@ jobs:
 
       - name: Run Tests
         run: ./gradlew test
+
