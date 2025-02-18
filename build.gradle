@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle'
+    id 'com.github.spotbugs' version '5.0.14'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+}
+
+application {
+    mainClass = 'Main'
+}
+
+checkstyle {
+    toolVersion '10.3'
+    configFile = file("config/checkstyle/checkstyle.xml")
+}
+
+
+spotbugs {
+    ignoreFailures = true
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
