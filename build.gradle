@@ -27,6 +27,10 @@ spotbugs {
     ignoreFailures = true
 }
 
+tasks.named('check') {
+    dependsOn 'spotbugsMain'
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
