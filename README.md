@@ -1,7 +1,10 @@
 # Airport Simulation – Design Patterns Implementation
 
 ## **Screencast Link**
-[Insert Screencast Link Here]
+[Screencast](https://youtu.be/VpOd278bjFw)
+
+## **GitHub Repo Link**
+[GitHub Repo](https://github.com/mlowber/ser316assign5)
 
 ---
 
