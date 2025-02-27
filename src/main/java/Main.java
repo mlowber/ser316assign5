@@ -1,23 +1,24 @@
-import observer.FlightEvent;
-import observer.ControlTower;
+import airport.Airport;
+import strategy.BasicAllocation;
+import strategy.PeakHourAllocation;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Airport Simulation: Observer Pattern Test");
+        System.out.println("Airport Simulation: Strategy Pattern Test");
 
-        // Create flight event
-        FlightEvent flight1 = new FlightEvent("AZ123");
+        // Initialize airport with Basic Allocation strategy
+        Airport airport = new Airport(new BasicAllocation());
 
-        // Create observers
-        ControlTower tower1 = new ControlTower("Tower A");
-        ControlTower tower2 = new ControlTower("Tower B");
+        // Allocate gates using Basic Allocation
+        airport.allocateGate("AZ123", "commercial");
+        airport.allocateGate("BZ456", "cargo");
 
-        // Add observers
-        flight1.addObserver(tower1);
-        flight1.addObserver(tower2);
+        // Switch to Peak Hour Allocation strategy
+        System.out.println("\nSwitching to Peak Hour Strategy...");
+        airport.setAllocationStrategy(new PeakHourAllocation());
 
-        // Simulate flight status changes
-        flight1.setStatus("Arrived");
-        flight1.setStatus("Departed");
+        // Allocate gates using Peak Hour Allocation
+        airport.allocateGate("AZ123", "commercial");
+        airport.allocateGate("BZ456", "cargo");
     }
 }
