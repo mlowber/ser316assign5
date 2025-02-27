@@ -2,7 +2,12 @@ package factory;
 
 /**
  * Factory class for creating different types of airplanes dynamically.
+ *
+ * Functional Requirements Addressed:
+ * - The airport simulation includes different types of aircraft.
+ * - Airplanes are instantiated dynamically based on their type.
  */
+
 public class AirplaneFactory {
 
     /**

@@ -5,8 +5,12 @@ import java.util.List;
 
 /**
  * Represents a flight event that can be observed by multiple control towers.
- * Notifies all registered observers when the flight status changes.
+ *
+ * Functional Requirements Addressed:
+ * - The simulation includes an event system where flight status changes trigger notifications.
+ * - Control towers (observers) automatically receive flight updates.
  */
+
 public class FlightEvent {
     private List<FlightObserver> observers = new ArrayList<>();
     private String flightNumber;

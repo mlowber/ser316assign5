@@ -17,6 +17,6 @@ public class CommercialAirplane extends Airplane {
      */
     @Override
     public void displayInfo() {
-        System.out.println("🚀 Commercial Airplane: Model=" + model + ", Capacity=" + capacity + ", Fuel Efficiency=" + fuelEfficiency + " L/km");
+        System.out.println("Commercial Airplane: Model=" + model + ", Capacity=" + capacity + ", Fuel Efficiency=" + fuelEfficiency + " L/km");
     }
 }

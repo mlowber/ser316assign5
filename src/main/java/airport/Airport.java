@@ -4,8 +4,12 @@ import strategy.ResourceAllocationStrategy;
 
 /**
  * The Airport class manages gate allocation for arriving flights.
- * It uses the Strategy Pattern to allow dynamic selection of different allocation strategies.
+ *
+ * Functional Requirements Addressed:
+ * - The simulation includes resource allocation (gates) for arriving flights.
+ * - The airport dynamically adjusts gate allocation based on predefined strategies.
  */
+
 public class Airport {
     private ResourceAllocationStrategy allocationStrategy;
 

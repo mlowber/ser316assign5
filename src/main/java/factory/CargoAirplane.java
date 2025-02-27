@@ -17,6 +17,6 @@ public class CargoAirplane extends Airplane {
      */
     @Override
     public void displayInfo() {
-        System.out.println("📦 Cargo Airplane: Model=" + model + ", Capacity=" + capacity + ", Fuel Efficiency=" + fuelEfficiency + " L/km");
+        System.out.println("Cargo Airplane: Model=" + model + ", Capacity=" + capacity + ", Fuel Efficiency=" + fuelEfficiency + " L/km");
     }
 }
