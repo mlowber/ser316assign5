@@ -1,6 +1,15 @@
 package strategy;
 
+/**
+ * Implements an allocation strategy that prioritizes commercial flights during peak hours.
+ */
 public class PeakHourAllocation implements ResourceAllocationStrategy {
+
+    /**
+     * Allocates a gate, prioritizing commercial flights over cargo flights.
+     * @param flightNumber The flight number.
+     * @param flightType The type of flight.
+     */
     @Override
     public void allocateGate(String flightNumber, String flightType) {
         if (flightType.equalsIgnoreCase("commercial")) {
